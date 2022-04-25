@@ -1,0 +1,113 @@
+class Person{
+    static CompanyName="Amazon";//static Member
+    constructor(name,age,address){
+        //set the values for 3 properties
+        this.name=name;
+        this.age=age;
+        this.address=address;
+    }
+
+
+    //Instance Method
+    getDetails(){
+        let persondata=
+        `
+        Name: ${this.name}
+        Age: ${this.age}
+        Address: ${this.address}
+        `;
+        console.log(persondata);
+    }
+
+    //Static Method
+    static getCompanyName(){
+        console.log(`Company Name: ${this.CompanyName}`);
+    }
+    
+
+}
+
+
+class Employee extends Person{
+static companyNew="Google";
+    constructor(name,age,address,designation,salary){ 
+        super(name,age,address);
+        this.designation=designation;
+        this.salary=salary;
+    }
+
+    //Instance method 
+    getDetails(){
+        let employeedata=
+        `
+        Name: ${this.name}
+        Age: ${this.age}
+        Address: ${this.address}
+        Designation: ${this.designation}
+        Salary: ${this.salary}
+        `;
+        console.log(employeedata);
+    }
+
+    //Static Method
+    static getCompanyName(){
+        console.log(Person.CompanyName);
+        console.log(Employee.companyNew);
+    }
+
+
+
+}
+
+
+
+//create an Object for employee 
+let employee1=new Employee("Jenny",38,"Benagaluru","Mern Developer","1000000");
+employee1.getDetails();
+Employee.getCompanyName();
+//create an Object for person class 
+let person1=new Person("Swapnil","45","Mumbai");
+
+//Accessing Instance Method
+// person1.getDetails();
+//Calling Static Method
+// Person.getCompanyName();
+
+
+
+
+
+//Array of object
+var employee=[
+
+    {
+        "id":101,
+        "name":"Lavish",
+        "Designation":"Senior FUll Stack Developer"
+    },
+    {
+        "id":102,
+        "name":"Shiva",
+        "Designation":"Junior FUll Stack Developer"
+    },
+    {
+        "id":103,
+        "name":"Swapnil",
+        "Designation":"Linux Administrator"
+    },
+    {
+        "id":104,
+        "name":"Sai",
+        "Designation":"System Analyst"
+    },
+    {
+        "id":105,
+        "name":"Mohan",
+        "Designation":"Mern Stack Developer"
+    },
+    {
+        "id":106,
+        "name":"Himanshu",
+        "Designation":"Java Developer"
+    }
+    ]

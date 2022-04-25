@@ -1,0 +1,19 @@
+function myfun()
+{
+var num1=1;
+let num2;
+const num3=3;
+{
+var num1=100;
+let num2=200;
+const num3=300;
+console.log("Inside the block",num1);
+console.log("Inside the block",num2);
+console.log("Inside the block",num3);
+}
+console.log("Outsidethe block",num1);
+console.log("Outsidethe block",num1);
+console.log("Outsidethe block",num1);
+}
+myfun();
+

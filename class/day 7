@@ -1,0 +1,76 @@
+//Ecamscript
+//js was submitted to Ecamscript-with version one,nowwe use ES-6
+//livescript=>1995
+//Microsoft=>Jsscript of IE-3=>1996
+//EUROPEAN COMPUTER MANUFACTURINGASSOCIATION(ECMA)=>
+//ecmascript-1
+//ecmascript-5
+//Es-6
+//let,const,function default para,Arrowfunction,classes,templateliterals,array methods
+//Es-6 or ecmascipt-2015=>Es 5 +New features
+
+
+
+
+//HOISTING:
+//functional scope:var
+//block scope(letand const){}
+// let course="MERN";
+// if(course==="MERN")
+{// var dept1="React Developer";
+    // let dept2="Full Stack Developer"
+    //can accessible outside the block// }
+    // console.log(course);//MERN// 
+    console.log(dept1);//React Developer// 
+    console.log(dept2);//dept2 is not definedfunction 
+    myfun()
+    {
+        var num1=1;
+        let num2=2;
+        const num3=3;
+        {
+            var num1=100;
+            let num2=200;
+            const num3=300;
+            console.log("Inside the block",num1);//100
+            console.log("Inside the block",num2);//200
+            console.log("Inside the block",num3);//300
+        }
+        console.log("Outside the block",num1);//100
+        console.log("Outside the block",num2);//2
+        console.log("Outside the block",num3);//3
+    }// 
+        console.log("Outside function",num1);//not definedmyfun();// var=functional scope// let and const=>block scope
+        
+        
+        
+        Array and object destructuring
+
+        Crate a simple list of elements that contains below para.using Array and Object
+         Destructuring1.Firstname2.Lastname3.Gender4.Age5.Location5 min
+
+
+         let array=[10,20,30,40,50];
+         //lets create 4 different variable to store the values of the arraylet num1,num2,num3,num4;
+         //Array Destructuring
+         [num1,num2,num3]=array;
+         console.log(num1);
+         console.log(num2);
+         console.log(num3);
+         let student={name:"Mohit",age:20,course:"Mern",address:{city:"Khagon",state:"MP",country:"India"}}
+         //Destructuring of object
+         let {name,age,course}=student;
+         //Template Literal =>You can create your own customized stringlet 
+         name1=`${name} is ${age} years old and studying ${course}`;
+         console.log(name1);
+         //Access city, state and country using destructuringlet 
+         {city,state,country}=student.address;
+         console.log(`City: ${city}State: ${state}Country: ${country}`)//String Interpolationconsole.log("City: "+city,"State: "+state,"Country: "+country);
+
+
+//object destructuring
+
+
+
+
+

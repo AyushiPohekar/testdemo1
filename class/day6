@@ -1,0 +1,61 @@
+//IIFE and Arrow function
+//IIFE:immediattely involved function execution
+//function foo(){
+//return "hello world";
+//}
+//var num=23;
+//let number=24;
+//IIFE
+//SYNTAX:(function(){
+//})();
+(function foo(a,b){
+    console.log(a*b);
+    })(a,b);
+    
+    //arrow function :
+    //syntax:variable=()=>{}
+    //if you have a single statement then you can 
+    //ignore return keyword  as well as the braces is not needed 
+    var compute=()=>"hello world";
+    console.log(compute());
+    
+    //if you have multiple statements 
+    //then return keyword is needed as well as the braces
+    var compute=()=>{
+     var result=23;
+    return "hello world";
+    }
+    var mul=(a,b)=>a*b;
+    console.log(mul(20,30));
+    //q3:
+    function range(n1,n2){
+    var arr=[];
+    for(var i=n1;i<=n2;i++)
+    {
+    arr.push(i);
+    }
+    return arr;
+    
+    
+    }
+    console.log(range(-3,7));
+    
+    //q4
+    var arr1=[3,'q','q','q',3,'q',3,'q',3];
+    var minocc=1;
+    var count=0;
+    var ele;
+    for(var i=0;i<arr1.length;i++){
+    for(var j=i;j<arr1.length;j++){
+    if(arr1[i]==arr1[j]){
+    count++;
+    }
+    if(minocc<count){
+    minocc=count;
+    ele=arr1[i];
+    }
+    
+    }
+    count=0;
+    }
+    console.log(` element ${ele} occurred ${minocc}`);

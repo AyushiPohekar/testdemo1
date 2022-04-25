@@ -1,0 +1,140 @@
+//OOP and this keyword in js
+//object oriented programming invloves in the creationof onjects
+//working with objects
+//inheritance:
+//class :it is a collections of properties and objects
+//class is a template 
+//Object:an object is a real time entity 
+
+//syntax:class classname{}
+class  Car{
+  constructor(color,brand)
+    {
+   this.color=color;
+   this.brand=brand;
+    }
+}
+color()
+     {
+return this.color
+      }
+//creating a object for the car
+//name of the object and the class should be same
+//new :is a keyword which will create the object for the car
+//syntax:var/let variablename=new Objectname();
+var c1=new Car("merown","Rolls royce");
+var c2=new Car("red","BMW");
+//constructors:it is a special way of assigning the values to objects
+//are written inside the class objects
+//color and brand are the constructor parameters 
+
+//Accessingthe values;
+comsole.log(c1.brand);
+//Multiple refrences for a single object c3
+var c3=c1;
+
+//methods
+console.log(c2.color());
+
+
+
+//inheritance 
+
+/OOP and this keyword in js
+//object oriented programming invloves in the creationof onjects
+//working with objects
+//inheritance:
+//class :it is a collections of properties and objects
+//class is a template 
+//Object:an object is a real time entity 
+
+//syntax:class classname{}
+class  Car{
+  constructor(color,brand){
+   this.color=color;
+   this.brand=brand;
+ }
+ 
+ color(){
+ return this.color;
+ }
+}
+//creating a object for the car
+//new :is a keyword which will create the object for the car
+//syntax:var/let variablename=new Objectname();
+var c1=new Car("merown","Rolls royce");
+var c2= new Car("red","BMW");
+//constructors:it is a special way of assigning the values to objects
+//are written inside the class objects
+//color and brand are the constructor parameters 
+//Accessing the values:
+console.log(c1.brand);
+//Multiple referneces for a single object
+var c3=c1;
+
+//methods
+
+console.log(c2.color);
+
+
+//inheritance is the process of acquiring the properties 
+//from the parent to child
+
+//extends is  the keyword which exhibit inheritance
+
+//when  you create an Object for children,
+//automatically it will be created for the parent also
+
+
+//super method 
+//it always refers to parent class
+//when you call inside the child constructor,
+//we get the access for the parent properties as well as methods
+class BMW extends Car{
+constructor(color,brand){
+  super(color,brand);
+  
+}
+result(){
+return this.color;
+}
+
+}
+
+
+var  b1=new BMW("blue","series01");
+console.log(b1.result())
+
+//spread operator and rest parameter
+
+//to unpack the array 
+var arr=[1,2,3];
+console.log(...arr);
+
+//for the strings
+//apart from split method you can use spread operator
+var str="guvi";
+let res=[...str];
+console.log(res);
+
+//combining the array
+let a1=[12,13,14];
+let a2=[115,16,17];
+let res1=[...a1,...a2];
+console.log(res1);
+
+
+//rest parameter means remaining 
+//rest parameter always returns an array
+function foo(...rest){
+  //console.log(rest);
+  var sum=0;
+  for(var i=0;i<rest.length;i++){
+  sum=sum+rest[i];
+  }
+  return sum;
+}
+
+console.log(foo(12,13,24,25,26));
+
+

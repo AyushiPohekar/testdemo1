@@ -1,0 +1,67 @@
+//functions
+//how to write a function
+//types of function
+//some problems based on function
+//functions helps us to reduce the repeatative tasks
+//syntax:function functionname(){}
+//parameters:passing the valueto the function
+function calculate(a,b)
+{
+return a*b;
+}
+console.log(calculate(20,30));
+//we need a compulsory keyword called return
+//2nd way of calling the function
+//here we are not using console.log outside the function that is we are not getting results outside the function
+function foo(a,b)
+{
+   console.log(a*b) ;
+}
+foo(12,13);
+
+
+//Array
+var arr=[12,13,14,15]
+function foo(arr)
+{
+for(var i=0;i<arr.length;i++)
+ {
+    if(arr[i]%2==0)
+    {
+       console.log(arr[i]);
+    }
+ }
+}
+foo(arr);
+
+//OR
+
+var arr=[12,13,14,15]
+var res=[];
+function foo(arr)
+{
+   for(var i=0;i<arr.length;i++)
+   {
+      if(arr[i]%2===0)//double== and triple === are not same,double  eual to does not check thedata type  while tripleequal to does.
+      {
+         res.push(arr[i]);
+
+      }
+   }
+   return res;
+}
+
+console.log(foo(arr));
+//
+
+
+
+//Anonymous function
+//syntax:var variable=function
+//here function is assigned to the variable
+
+var compute=function(a,b)
+{
+ return a+b;
+}
+console.log(compute(12,14));
